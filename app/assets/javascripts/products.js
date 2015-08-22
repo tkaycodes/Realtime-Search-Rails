@@ -1,8 +1,7 @@
+// console.log("dasdasdsadas");
 
-
-
-$(document).ready(function(){
-console.log("AM I LOADED!");
+$(document).on('ready page:load', function(){
+// $(document).ready(function() {
   $('#product_search').keyup(function(){
     var value = $(this).val();
     console.log(value);
@@ -20,3 +19,5 @@ console.log("AM I LOADED!");
 
   });
 });
+
+

@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
@@ -20,22 +20,3 @@
 // TODO: highlight selected element
 
 
-$(document).ready(function(){
-
-  $('#product_search').keyup(function(){
-    var value = $(this).val();
-    console.log(value);
-
-  $.ajax({
-    // url: "/searchresult",
-    url:"/searchresult?product+search=" + value,
-    method: "get",
-    // data: {'product search': value}
-    dataType: "script"
-  
-  });
-
-
-
-  });
-});
