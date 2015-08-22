@@ -1,0 +1,12 @@
+$('#all_products_body').html('<%=j render partial: 'allproducts' %>');
+if ($('a[href="/"]').length == 0){
+$('.container').append('<a href='+'"/"'+'>Back</a>');
+}
+else{
+  console.log("if else failed");
+};
+
+
+
+
+

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Product', new_product_path %>
+
+    <h1>Listing Products</h1>
+
+
+    <!-- <form action="/searchresult">
+    <input name="product_search" class="form-control" placeholder="Product Search"></input>
+    </form><hr> -->
+
+    <%=form_tag '/searchresult',  method: :get  do %>
+    <%=label_tag :"product search"%>
+    <%=text_field_tag :"product search"%>
+    <%end%>
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Added</th>
+      <!-- <th>Bids</th> -->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="all_products_body">
+      <%=render partial: 'allproducts'%>
+  </tbody>
+</table>
+
+
+<%if params[:"product search"].present?%>
+<%= link_to "Back", '/'%>
+<%end%>
